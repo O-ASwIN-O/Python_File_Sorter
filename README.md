@@ -32,13 +32,13 @@ This helps keep your workspace clean by automatically moving images, data files,
 import os, shutil
 
 # Folder path
-path = r"C:/Users/ASWIN/file_sort/"
+path = r"C:/Users/ASWIN/file_sort/"  #ADD YOUR PATH!
 
 # List all files in the directory
 files_avaliable = os.listdir(path)
 
 # Folder names to create
-folder_names = ['Images', 'Datas', 'Text files']
+folder_names = ['Images', 'Datas', 'Text files'] #ADD MORE IF YOU WANT!
 
 # Create folders if not present
 for i in range(0, 3):
@@ -53,3 +53,4 @@ for file in files_avaliable:
         shutil.move(path + file, path + "Images/" + file)
     elif ".txt" in file and not os.path.exists(path + "Text files/" + file):
         shutil.move(path + file, path + "Text files/" + file)
+#ONLY MENTIONED FILE EXTNSION ARE GONA WORK..
